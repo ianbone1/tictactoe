@@ -4,6 +4,8 @@ from django.utils.encoding import python_2_unicode_compatible
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import Q
+
 
 GAME_STATUS_CHOICES=(
     ('F', 'First Player To Move'),
@@ -13,6 +15,14 @@ GAME_STATUS_CHOICES=(
     ('D', 'Draw')
 )
 
+class GamesQuerySet(models.QuerySet):
+    def games_for_user(self, user):
+        return self.filter(Q(first_player=user) | Q(second_player=user))
+
+    def active(self):
+        return self.filter(Q(status='F') | Q(status='S'))
+
+
 
 @python_2_unicode_compatible
 class Game(models.Model):
@@ -21,6 +31,7 @@ class Game(models.Model):
     start_time = models.DateTimeField(auto_now_add=True)
     last_active = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=1, default='F', choices=GAME_STATUS_CHOICES)
+    objects = GamesQuerySet.as_manager()
     def __str__(self):
         return "{0} vs {1}".format(self.first_player, self.second_player)
 
