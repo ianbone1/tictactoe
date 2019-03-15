@@ -1,5 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView, CreateView
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+
 
 from .models import Game
 from .forms import MoveForm
@@ -29,3 +33,11 @@ def make_move(request, id):
         return render(request,
                       "gameplay/game_detail.html",
                       {'game': game, 'form': form})
+
+class AllGamesList(ListView):
+    model = Game
+
+class SignUpView(CreateView):
+    form_class = UserCreationForm
+    template_name= "player/signup_form.html"
+    success_url=reverse_lazy('player_home')
