@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f1dedba-768d-4132-99df-a5a08544ccc7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gameplay/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameplay/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameplay/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameplay/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="1f1dedba-768d-4132-99df-a5a08544ccc7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,8 +160,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="13" />
-    <option name="y" value="49" />
+    <option name="x" value="33" />
+    <option name="y" value="37" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -265,8 +262,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="13" y="49" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="33" y="37" width="1400" height="1000" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25018182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

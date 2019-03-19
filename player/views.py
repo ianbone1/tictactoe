@@ -40,7 +40,7 @@ def accept_invitation(request, id):
         if "accept" in request.POST:
             game = Game.objects.create(
                 first_player=invitation.to_user,
-            second_player=invitation.from_user,
+                second_player=invitation.from_user,
             )
         invitation.delete()
         return redirect(game)
